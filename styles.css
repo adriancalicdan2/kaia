@@ -19,28 +19,6 @@ html {
     margin: auto;
 }
 
-.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* Dark Mode Toggle */
-.dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 24px;
-    display: none; /* Hidden by default */
-}
-
-.dark-mode-toggle i {
-    color: #555;
-}
-
-.dark-mode .dark-mode-toggle i {
-    color: #fff;
-}
 
 /* Header */
 header {
@@ -226,16 +204,6 @@ nav {
     font-size: 0.9rem;
 }
 
-.social-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #00FFFF;
-    font-weight: 600;
-}
-
-.social-link i {
-    margin-right: 5px;
-}
 
 /* Music Player Section */
 .music-player {
@@ -260,11 +228,156 @@ nav {
     }
 }
 
+/* Contact Section */
+.contact-section {
+    background: #f4f4f4;
+    padding: 80px 20px;
+    color: #333;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    color: #6f33f0;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #6f33f0;
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #FFD700;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(180deg, #A37BF7 0%, #1BDFCF 100%); /* Gradient Background */
+    padding: 80px 20px;
+    color: #fff; /* Change text color to white for better contrast */
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    color: #fff; /* Text color white to stand out against gradient */
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #fff; /* Text color white */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #fff; /* White icons for better visibility */
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #FFD700;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2); /* Slight transparency for form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6f33f0;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #6f33f0;
+    background-color: #fff;
+}
+
+.contact-form .btn-submit {
+    background-color: #6f33f0;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #5a2cc8;
+}
 
 
 /* Footer */
 footer {
-    background: linear-gradient(90deg, #FF00FF, #A37BF7);
+    background: linear-gradient(90deg, #A37BF7, #A37BF7);
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -290,4 +403,31 @@ footer .social-links a:hover {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #6f33f0;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #5a2cc8;
+    transform: scale(1.1);
+}
+
+/* Show the button when scrolled down */
+#back-to-top.visible {
+    opacity: 1;
 }

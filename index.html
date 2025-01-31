@@ -11,28 +11,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <div class="dark-mode-toggle">
-        <i class="fas fa-moon" id="darkModeIcon"></i>
+    <!-- Dark Mode Toggle in Hamburger Menu -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">KAIA</a>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">KAIA</a>
-                <div class="hamburger" id="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#members">Members</a></li>
-                    <li><a href="#music">Music</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
     <main>
         <!-- Hero Section -->
@@ -148,27 +145,62 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>If you have any inquiries or would like to get in touch with KAIA, please reach out through their official social media channels:</p>
-                <div class="social-links">
-                    <a href="https://instagram.com/kaia.officialph" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/KAIAOfficialPH" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://tiktok.com/@kaiaofficialph" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.youtube.com/channel/UCdjyExLaRqAL7V684N8bayQ" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://facebook.com/OfficialKAIA" target="_blank"><i class="fab fa-facebook"></i></a>
-                </div>
+        <!-- New Contact Section -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you have any inquiries, collaborations, or just want to say hello, feel free to reach out through the contact form or follow KAIA on their social media channels!</p>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/kaia.officialph" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/KAIAOfficialPH" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://tiktok.com/@kaiaofficialph" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/channel/UCdjyExLaRqAL7V684N8bayQ" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/OfficialKAIA" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 KAIA. All rights reserved.</p>
         </div>
-    </footer>
+
+        <div class="contact-form">
+            <h3>Contact Us</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="Full Name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 KAIA. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://instagram.com/kaia.officialph" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/KAIAOfficialPH" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://tiktok.com/@kaiaofficialph" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCdjyExLaRqAL7V684N8bayQ" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com/OfficialKAIA" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+
+<button id="back-to-top" class="back-to-top">
+    ↑
+</button>
+
 
     <script src="script.js"></script>
 </body>
