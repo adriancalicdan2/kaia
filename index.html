@@ -161,24 +161,28 @@
             </div>
         </div>
 
-        <div class="contact-form">
+        <form id="contact-form" class="contact-form">
             <h3>Contact Us</h3>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" placeholder="Full Name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" placeholder="Email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" placeholder="Message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-        </div>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" placeholder="Full Name" id="name" name="from_name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" placeholder="Email" id="email" name="from_email" required />
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+                  <!-- Success/Failure Message -->
+  <div id="form-message"></div>
+        
+</div>
+        </form>
+
+  
     </div>
 </section>
 
@@ -201,6 +205,33 @@
     ↑
 </button>
 
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    // Initialize EmailJS
+    emailjs.init("95k_Fj2kWAzLVmsKe"); // Replace with your user ID from EmailJS
+
+    const contactForm = document.getElementById("contact-form");
+    const formMessage = document.getElementById("form-message");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Send email using emailjs.sendForm() which automatically gathers form data
+      emailjs.sendForm("service_629v84f", "template_4xf8449", this).then(
+        function (response) {
+          console.log("Success!", response);
+          formMessage.innerHTML = '<p style="color: green;">Your message has been sent successfully!</p>';
+          contactForm.reset(); // Clear the form fields
+        },
+        function (error) {
+          console.error("Failed...", error);
+          formMessage.innerHTML = '<p style="color: red;">Sorry, there was an error sending your message.</p>';
+        }
+      );
+    });
+  </script>
 
     <script src="script.js"></script>
 </body>
