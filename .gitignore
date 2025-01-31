@@ -1,8 +1,0 @@
-assets/
-
-# Ignore all images (e.g., PNG, JPG, GIF, SVG)
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.svg
