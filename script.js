@@ -6,6 +6,13 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
+// Close the menu when clicking outside
+document.addEventListener("click", (event) => {
+  if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+    navLinks.classList.remove("active");
+  }
+});
+
 // Get the button
 const backToTopButton = document.getElementById("back-to-top");
 
@@ -25,4 +32,21 @@ backToTopButton.addEventListener("click", () => {
     top: 0,
     behavior: "smooth",
   });
+});
+
+let lastScrollTop = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down → Hide header
+    header.style.top = "-100px";
+  } else {
+    // Scrolling up → Show header
+    header.style.top = "0";
+  }
+
+  lastScrollTop = currentScroll;
 });
